@@ -14,6 +14,14 @@ class AttendanceCreate(AttendanceBase):
     pass
 
 
+class AttendanceUpdate(BaseModel):
+    staff_id: str | None = None
+    date: date | None 
+    attendance_status: str | None = None
+    attendace_type: str | None = None
+    remark: str | None = None
+
+
 class AttendanceResponse(AttendanceBase):
     id: int
 
